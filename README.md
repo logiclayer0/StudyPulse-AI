@@ -2,10 +2,15 @@
 
 **Intelligent Learning Workspace - AI-Powered Study Material Generator**
 
+[![Live App](https://img.shields.io/badge/Live_Demo-Streamlit-FF4B4B.svg)](https://studypulse-ai.streamlit.app/)
 [![Python 3.8+](https://img.shields.io/badge/python-3.8+-blue.svg)](https://www.python.org/downloads/)
 [![Streamlit](https://img.shields.io/badge/Streamlit-1.28+-FF4B4B.svg)](https://streamlit.io/)
-[![Gemini AI](https://img.shields.io/badge/Gemini_AI-1.5_Flash-4285F4.svg)](https://ai.google.dev/)
+[![Groq AI](https://img.shields.io/badge/Groq_AI-GPT_OSS_20B-f3603f.svg)](https://groq.com/)
 [![License](https://img.shields.io/badge/license-MIT-green.svg)](LICENSE)
+
+---
+
+🌐 **Live Demo:** [studypulse-ai.streamlit.app](https://studypulse-ai.streamlit.app/)
 
 ---
 
@@ -19,45 +24,59 @@
 - [Configuration](#-configuration)
 - [Usage](#-usage)
 - [Project Structure](#-project-structure)
-- [API Endpoints](#-api-endpoints)
 - [Contributing](#-contributing)
 - [License](#-license)
-- [Contact](#-contact)
 
 ---
 
 ## 🚀 Overview
 
-**StudyPulse-AI** is an intelligent learning workspace that automatically generates comprehensive study materials from various knowledge sources. Built with Streamlit and powered by Google's Gemini AI, it transforms YouTube videos, PDF documents, and direct text input into structured learning packets including:
+**StudyPulse-AI** is an ultra-fast, intelligent learning workspace that automatically generates comprehensive study materials from multiple knowledge sources. Built with **Streamlit** and powered by **Groq LPU Acceleration Engine (`openai/gpt-oss-20b`)**, it instantly transforms YouTube videos, PDF documents, and lecture notes into structured learning packets including:
 
 - 📘 Deep concept summaries
-- ⚡ Mind-blowing fun facts
-- 🎴 Memory flashcards
-- 📝 Exam-style questions (PYQs)
-- 🧩 Interactive quizzes
+- ⚡ Mind-blowing real-world fun facts
+- 🎴 Active recall flashcards
+- 📝 Exam-style PYQs with detailed solutions
+- 🧩 Interactive multiple-choice quizzes
 
 ---
 
 ## ✨ Features
 
 ### 📺 Multi-Source Knowledge Extraction
-- **YouTube Videos** - Extract and process video transcripts
-- **PDF Documents** - Parse and analyze academic PDFs
-- **Direct Text** - Paste lecture notes or transcripts
+- **YouTube Transcripts** - Auto-extracts transcripts directly from YouTube URLs.
+- **PDF Parsing** - Extracts readable text from academic PDFs and lecture notes.
+- **Direct Text Input** - Simply paste raw lecture text or custom notes.
 
-### 🤖 AI-Powered Generation
-- **Deep Concept Summaries** - Comprehensive explanations with context
-- **Fun Facts** - Real-world applications and interesting insights
-- **Flashcards** - Active recall question-answer pairs
-- **PYQs** - Exam-style questions with detailed solutions
-- **Interactive Quizzes** - Multiple-choice questions with explanations
-
-### 🎯 Interactive Dashboard
-- Tab-based navigation for easy access
-- Real-time quiz feedback
-- Expandable flashcards
-- Detailed solution explanations
+### 🤖 AI-Powered Study Packet Generation
+- **Deep Concept Summary** - In-depth breakdown covering core theories and key contexts.
+- **Fun Facts** - Real-world applications and trivia derived from the content.
+- **Memory Flashcards** - Expandable active-recall QA pairs.
+- **Exam PYQs** - Exam-grade questions complete with detailed solution guides.
+- **Interactive Quiz Engine** - Real-time multiple-choice quizzes with instant grading and explanations.
 
 ---
 
-## 🏗️ Architecture
+## 🛠️ Tech Stack
+
+- **Frontend / UI:** [Streamlit](https://streamlit.io/)
+- **LLM Engine:** [Groq Cloud LPU](https://groq.com/) (`openai/gpt-oss-20b`)
+- **Document Parsing:** `pypdf`
+- **Video Extraction:** `youtube-transcript-api`
+- **Environment Management:** `python-dotenv`
+
+---
+
+## 📁 Project Structure
+
+```text
+studypulse-ai/
+├── .env                  # Secret keys (local development)
+├── .gitignore            # Git ignore file
+├── requirements.txt      # Python dependencies
+├── app.py                # Main Streamlit application
+└── utils/
+    ├── __init__.py
+    ├── pdf_processor.py      # PDF text extractor
+    ├── youtube_processor.py  # YouTube transcript handler
+    └── gemini_engine.py     # Groq LLM inference integration
