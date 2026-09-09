@@ -80,3 +80,27 @@ studypulse-ai/
     ├── pdf_processor.py      # PDF text extractor
     ├── youtube_processor.py  # YouTube transcript handler
     └── gemini_engine.py     # Groq LLM inference integration
+```
+## ⚙️ Local Installation & Setup
+1. Clone the repository:
+ ```
+   git clone [https://github.com/YOUR_GITHUB_USERNAME/studypulse-ai.git](https://github.com/YOUR_GITHUB_USERNAME/studypulse-ai.git)
+cd studypulse-ai
+```
+2. Install dependencies:
+   ```
+   pip install -r requirements.txt
+   ```
+3. Configure Environment Variables:
+Create a .env file in the root directory:
+```
+GROQ_API_KEY=your_groq_api_key_here
+```
+4. Run the Streamlit app:
+   ```
+   sreamlit run app.py
+   ```
+## 📄 License
+Distributed under the MIT License.   
+
+
